@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,12 @@
   <title>SN1 & SN2 Reaction Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- 
+    ===========================
+    BASE STYLES (Your original)
+    Animation CSS will be added in Part 3
+    ===========================
+  -->
   <style>
     :root {
       --bg: #f5f9ff;
@@ -171,16 +178,20 @@
   <p>
     A complete, visually structured, university-level review of nucleophilic
     substitution reactions in organic chemistry.
-  </p>
+  </p >
 </header>
 
 <nav>
-  <a href="#sn1">SN1</a>
-  <a href="#sn2">SN2</a>
-  <a href="#compare">Comparison</a>
+  <a href=" ">SN1</a >
+  <a href="#sn1-animation">SN1 Animation</a >
+  <a href="#sn2">SN2</a >
+  <a href="#sn2-animation">SN2 Animation</a >
+  <a href="#compare">Comparison</a >
 </nav>
 
-<!-- SN1 -->
+<!-- ===================== -->
+<!-- ======= SN1 ========= -->
+<!-- ===================== -->
 <section id="sn1">
   <h2>SN1 Reaction</h2>
 
@@ -190,7 +201,7 @@
       <strong>SN1</strong> (Substitution Nucleophilic Unimolecular) reactions
       proceed through a carbocation intermediate. The rate-determining step
       involves only the substrate.
-    </p>
+    </p >
   </div>
 
   <div class="card">
@@ -200,7 +211,7 @@
       <li><strong>Step 2 (Fast):</strong> Nucleophile attacks the planar carbocation.</li>
       <li><strong>Step 3 (If needed):</strong> Deprotonation yields the final product.</li>
     </ul>
-    <p>Carbocation rearrangements may occur to form a more stable intermediate.</p>
+    <p>Carbocation rearrangements may occur to form a more stable intermediate.</p >
   </div>
 
   <div class="card">
@@ -218,7 +229,7 @@
     <p>
       The planar carbocation allows attack from both sides, producing a
       <strong>racemic mixture</strong>.
-    </p>
+    </p >
   </div>
 
   <div class="card">
@@ -245,7 +256,30 @@
   </div>
 </section>
 
-<!-- SN2 -->
+<!-- =============================== -->
+<!-- SN1 MECHANISM ANIMATION PLACEHOLDER -->
+<!-- SVG + buttons will be inserted in Part 2 -->
+<!-- =============================== -->
+<section id="sn1-animation">
+  <h2>SN1 Mechanism Animation</h2>
+  <div class="card">
+    <p>
+      This interactive animation illustrates the stepwise mechanism of an SN1
+      reaction, including carbocation formation, nucleophilic attack, and product
+      formation. Use the controls below to progress through each mechanistic step.
+    </p >
+
+    <!-- PART 2 WILL INSERT:
+         - SVG diagram
+         - Step description box
+         - Next / Reset buttons
+    -->
+  </div>
+</section>
+
+<!-- ===================== -->
+<!-- ======= SN2 ========= -->
+<!-- ===================== -->
 <section id="sn2">
   <h2>SN2 Reaction</h2>
 
@@ -254,15 +288,15 @@
     <p>
       <strong>SN2</strong> (Substitution Nucleophilic Bimolecular) reactions occur
       in a single, concerted step involving both substrate and nucleophile.
-    </p>
+    </p >
   </div>
 
   <div class="card">
     <h3>Mechanism Steps</h3>
     <ul>
-      <li>Nucleophile attacks the electrophilic carbon from the backside</li>
-      <li>C–Nu bond forms as C–X bond breaks simultaneously</li>
-      <li>Single transition state, no intermediate</li>
+      <li>Nucleophile attacks the electrophilic carbon from the backside.</li>
+      <li>C–Nu bond forms as the C–X bond breaks simultaneously.</li>
+      <li>Single transition state, no intermediate.</li>
     </ul>
   </div>
 
@@ -281,7 +315,7 @@
     <p>
       Backside attack results in <strong>Walden inversion</strong>, giving 100%
       inversion of configuration.
-    </p>
+    </p >
   </div>
 
   <div class="card">
@@ -308,6 +342,30 @@
   </div>
 </section>
 
+<!-- =============================== -->
+<!-- SN2 MECHANISM ANIMATION PLACEHOLDER -->
+<!-- SVG + buttons will be inserted in Part 2 -->
+<!-- =============================== -->
+<section id="sn2-animation">
+  <h2>SN2 Mechanism Animation</h2>
+  <div class="card">
+    <p>
+      This interactive animation demonstrates the concerted backside attack
+      characteristic of the SN2 mechanism, including the transition state and
+      Walden inversion of configuration.
+    </p >
+
+    <!-- PART 2 WILL INSERT:
+         - SVG diagram
+         - Step description box
+         - Next / Reset buttons
+    -->
+  </div>
+</section>
+
+<!-- ===================== -->
+<!-- === COMPARISON ===== -->
+<!-- ===================== -->
 <section id="compare">
   <h2>SN1 vs SN2 Comparison</h2>
 
@@ -356,6 +414,309 @@
   Built for Organic Chemistry Review • SN1 & SN2 • GitHub Pages Ready
 </footer>
 
+<!-- 
+  PART 3 WILL INSERT:
+  - Additional CSS for animations
+  - JavaScript logic for step control
+-->
+
 </body>
 </html>
+```
+<!-- ========================= -->
+<!-- PART 2 : SVG Animations  -->
+<!-- SN1 + SN2 Mechanisms     -->
+<!-- Buttons & Explanation   -->
+<!-- ========================= -->
 
+<section id="sn1-animation">
+  <h2>SN1 Mechanism Animation</h2>
+
+  <div class="card">
+    <h3>Step-by-Step Mechanism (SN1)</h3>
+    <p id="sn1-step-text">
+      Step 1: The leaving group (X⁻) departs, forming a carbocation intermediate.
+    </p >
+
+    <div class="animation-container">
+      <svg id="sn1-svg" width="600" height="260" viewBox="0 0 600 260">
+        <!-- Substrate -->
+        <text x="50" y="130" font-size="18">R–C–X</text>
+
+        <!-- Leaving group -->
+        <text id="sn1-x" x="120" y="130" font-size="18">X</text>
+
+        <!-- Arrow for bond breaking -->
+        <line id="sn1-arrow1" x1="100" y1="125" x2="150" y2="100"
+              stroke="black" stroke-width="2" marker-end="url(#arrowhead)" opacity="0"/>
+
+        <!-- Carbocation -->
+        <text id="sn1-carbocation" x="250" y="130" font-size="18" opacity="0">
+          R–C⁺
+        </text>
+
+        <!-- Nucleophile -->
+        <text id="sn1-nu" x="450" y="130" font-size="18" opacity="0">
+          :Nu⁻
+        </text>
+
+        <!-- Attack arrow -->
+        <line id="sn1-arrow2" x1="430" y1="125" x2="300" y2="125"
+              stroke="black" stroke-width="2" marker-end="url(#arrowhead)" opacity="0"/>
+
+        <!-- Product -->
+        <text id="sn1-product" x="250" y="200" font-size="18" opacity="0">
+          R–C–Nu
+        </text>
+
+        <!-- Arrowhead definition -->
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7"
+                  refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+          </marker>
+        </defs>
+      </svg>
+
+      <div class="animation-controls">
+        <button onclick="sn1PrevStep()">Previous</button>
+        <button onclick="sn1NextStep()">Next</button>
+        <button onclick="sn1Reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="sn2-animation">
+  <h2>SN2 Mechanism Animation</h2>
+
+  <div class="card">
+    <h3>Step-by-Step Mechanism (SN2)</h3>
+    <p id="sn2-step-text">
+      Step 1: The nucleophile approaches from the backside opposite the leaving group.
+    </p >
+
+    <div class="animation-container">
+      <svg id="sn2-svg" width="600" height="260" viewBox="0 0 600 260">
+        <!-- Substrate -->
+        <text x="250" y="130" font-size="18">R–C–X</text>
+
+        <!-- Leaving group -->
+        <text id="sn2-x" x="320" y="130" font-size="18">X</text>
+
+        <!-- Nucleophile -->
+        <text id="sn2-nu" x="100" y="130" font-size="18">:Nu⁻</text>
+
+        <!-- Backside attack arrow -->
+        <line id="sn2-arrow1" x1="140" y1="125" x2="240" y2="125"
+              stroke="black" stroke-width="2" marker-end="url(#arrowhead)" opacity="0"/>
+
+        <!-- Bond breaking arrow -->
+        <line id="sn2-arrow2" x1="300" y1="125" x2="360" y2="90"
+              stroke="black" stroke-width="2" marker-end="url(#arrowhead)" opacity="0"/>
+
+        <!-- Transition state -->
+        <text id="sn2-ts" x="240" y="200" font-size="18" opacity="0">
+          [Nu···C···X]‡
+        </text>
+
+        <!-- Product -->
+        <text id="sn2-product" x="250" y="230" font-size="18" opacity="0">
+          R–C–Nu + X⁻
+        </text>
+      </svg>
+
+      <div class="animation-controls">
+        <button onclick="sn2PrevStep()">Previous</button>
+        <button onclick="sn2NextStep()">Next</button>
+        <button onclick="sn2Reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================= -->
+<!-- PART 3 : CSS + JavaScript -->
+<!-- Animation Styles & Logic -->
+<!-- ========================= -->
+
+<style>
+/* Animation containers */
+.animation-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.animation-controls {
+  margin-top: 15px;
+}
+
+.animation-controls button {
+  background: #4f9cf9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 0 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.animation-controls button:hover {
+  background: #2563eb;
+}
+
+svg {
+  background: #f8fbff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Smooth appearance */
+svg text,
+svg line {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+</style>
+
+<script>
+/* =========================
+   SN1 Animation Logic
+========================= */
+
+let sn1Step = 0;
+const sn1Steps = [
+  {
+    text: "Step 1: The leaving group (X⁻) departs, forming a carbocation intermediate.",
+    show: ["sn1-arrow1"],
+    hide: ["sn1-carbocation", "sn1-nu", "sn1-arrow2", "sn1-product"]
+  },
+  {
+    text: "Step 2: A carbocation intermediate (R–C⁺) is formed.",
+    show: ["sn1-carbocation"],
+    hide: ["sn1-arrow1", "sn1-nu", "sn1-arrow2", "sn1-product"]
+  },
+  {
+    text: "Step 3: The nucleophile attacks the planar carbocation.",
+    show: ["sn1-nu", "sn1-arrow2"],
+    hide: ["sn1-product"]
+  },
+  {
+    text: "Step 4: The final substitution product (R–C–Nu) is formed.",
+    show: ["sn1-product"],
+    hide: []
+  }
+];
+
+function updateSN1() {
+  document.getElementById("sn1-step-text").textContent = sn1Steps[sn1Step].text;
+
+  const allElements = [
+    "sn1-arrow1",
+    "sn1-carbocation",
+    "sn1-nu",
+    "sn1-arrow2",
+    "sn1-product"
+  ];
+
+  allElements.forEach(id => {
+    document.getElementById(id).style.opacity = 0;
+  });
+
+  sn1Steps[sn1Step].show.forEach(id => {
+    document.getElementById(id).style.opacity = 1;
+  });
+}
+
+function sn1NextStep() {
+  if (sn1Step < sn1Steps.length - 1) {
+    sn1Step++;
+    updateSN1();
+  }
+}
+
+function sn1PrevStep() {
+  if (sn1Step > 0) {
+    sn1Step--;
+    updateSN1();
+  }
+}
+
+function sn1Reset() {
+  sn1Step = 0;
+  updateSN1();
+}
+
+/* =========================
+   SN2 Animation Logic
+========================= */
+
+let sn2Step = 0;
+const sn2Steps = [
+  {
+    text: "Step 1: The nucleophile approaches from the backside of the carbon.",
+    show: ["sn2-nu"],
+    hide: ["sn2-arrow1", "sn2-arrow2", "sn2-ts", "sn2-product"]
+  },
+  {
+    text: "Step 2: Backside attack begins while the C–X bond starts breaking.",
+    show: ["sn2-arrow1", "sn2-arrow2"],
+    hide: ["sn2-ts", "sn2-product"]
+  },
+  {
+    text: "Step 3: The transition state is formed with partial bonds.",
+    show: ["sn2-ts"],
+    hide: ["sn2-product"]
+  },
+  {
+    text: "Step 4: The product forms with inversion of configuration.",
+    show: ["sn2-product"],
+    hide: []
+  }
+];
+
+function updateSN2() {
+  document.getElementById("sn2-step-text").textContent = sn2Steps[sn2Step].text;
+
+  const allElements = [
+    "sn2-arrow1",
+    "sn2-arrow2",
+    "sn2-ts",
+    "sn2-product"
+  ];
+
+  allElements.forEach(id => {
+    document.getElementById(id).style.opacity = 0;
+  });
+
+  sn2Steps[sn2Step].show.forEach(id => {
+    document.getElementById(id).style.opacity = 1;
+  });
+}
+
+function sn2NextStep() {
+  if (sn2Step < sn2Steps.length - 1) {
+    sn2Step++;
+    updateSN2();
+  }
+}
+
+function sn2PrevStep() {
+  if (sn2Step > 0) {
+    sn2Step--;
+    updateSN2();
+  }
+}
+
+function sn2Reset() {
+  sn2Step = 0;
+  updateSN2();
+}
+
+/* Initialize animations on load */
+window.onload = function() {
+  updateSN1();
+  updateSN2();
+};
+</script>

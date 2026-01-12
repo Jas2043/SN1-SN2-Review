@@ -83,10 +83,8 @@
       margin-bottom: 35px;
       font-size: 2.4rem;
       text-align: center;
-      letter-spacing: 0.5px;
     }
 
-    /* Small titles stronger */
     h3 {
       margin-top: 0;
       margin-bottom: 12px;
@@ -112,18 +110,6 @@
       box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
     }
 
-    .card p {
-      font-size: 1.02rem;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
     code {
       background: #eff6ff;
       padding: 4px 8px;
@@ -144,7 +130,6 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
-      font-size: 0.95rem;
     }
 
     th, td {
@@ -186,84 +171,140 @@
   <p>
     A complete, visually structured, university-level review of nucleophilic
     substitution reactions in organic chemistry.
-  </p >
+  </p>
 </header>
 
 <nav>
-  <a href=" ">SN1</a >
-  <a href="#sn2">SN2</a >
-  <a href="#compare">Comparison</a >
+  <a href="#sn1">SN1</a>
+  <a href="#sn2">SN2</a>
+  <a href="#compare">Comparison</a>
 </nav>
 
+<!-- SN1 -->
 <section id="sn1">
   <h2>SN1 Reaction</h2>
 
   <div class="card">
-    <h3>Definition & Mechanism</h3>
+    <h3>Definition</h3>
     <p>
       <strong>SN1</strong> (Substitution Nucleophilic Unimolecular) reactions
-      proceed through a carbocation intermediate.
-    </p >
-    <ul>
-      <li>Multi-step reaction mechanism</li>
-      <li>Rate depends only on the substrate concentration</li>
-      <li>Carbocation rearrangements are possible</li>
-    </ul>
+      proceed through a carbocation intermediate. The rate-determining step
+      involves only the substrate.
+    </p>
   </div>
 
   <div class="card">
-    <h3>Rate Law</h3>
-    <p><code>rate = k [R–X]</code></p >
+    <h3>Mechanism Steps</h3>
+    <ul>
+      <li><strong>Step 1 (Slow, RDS):</strong> Leaving group departs to form a carbocation.</li>
+      <li><strong>Step 2 (Fast):</strong> Nucleophile attacks the planar carbocation.</li>
+      <li><strong>Step 3 (If needed):</strong> Deprotonation yields the final product.</li>
+    </ul>
+    <p>Carbocation rearrangements may occur to form a more stable intermediate.</p>
+  </div>
+
+  <div class="card">
+    <h3>Factors Affecting SN1</h3>
+    <ul>
+      <li><strong>Substrate:</strong> Tertiary &gt; Secondary &gt; Primary</li>
+      <li><strong>Leaving Group:</strong> Better leaving groups increase rate</li>
+      <li><strong>Solvent:</strong> Polar protic solvents stabilize ions</li>
+      <li><strong>Carbocation Stability:</strong> Allylic and benzylic favored</li>
+    </ul>
   </div>
 
   <div class="card">
     <h3>Stereochemistry</h3>
     <p>
-      The planar carbocation allows nucleophilic attack from both sides,
-      producing a <strong>racemic mixture</strong>.
-    </p >
+      The planar carbocation allows attack from both sides, producing a
+      <strong>racemic mixture</strong>.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Common Mistakes & Tips</h3>
+    <ul>
+      <li>Assuming strong nucleophiles speed up SN1 (they do not)</li>
+      <li>Forgetting possible carbocation rearrangements</li>
+      <li>Ignoring solvent effects</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Summary Questions</h3>
+    <ul>
+      <li>What is the rate-determining step of SN1?</li>
+      <li>Why are tertiary carbons favored?</li>
+      <li>Why does SN1 lead to racemization?</li>
+    </ul>
   </div>
 
   <div class="card">
     <h3>SN1 Video Explanation</h3>
-    <iframe src="https://www.youtube.com/embed/rRAKyR7hX-U"
-            allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/rRAKyR7hX-U" allowfullscreen></iframe>
   </div>
 </section>
 
+<!-- SN2 -->
 <section id="sn2">
   <h2>SN2 Reaction</h2>
 
   <div class="card">
-    <h3>Definition & Mechanism</h3>
+    <h3>Definition</h3>
     <p>
       <strong>SN2</strong> (Substitution Nucleophilic Bimolecular) reactions occur
-      in one concerted step through a backside attack.
-    </p >
+      in a single, concerted step involving both substrate and nucleophile.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Mechanism Steps</h3>
     <ul>
-      <li>Single-step (concerted) mechanism</li>
-      <li>No intermediate species</li>
-      <li>Strongly affected by steric hindrance</li>
+      <li>Nucleophile attacks the electrophilic carbon from the backside</li>
+      <li>C–Nu bond forms as C–X bond breaks simultaneously</li>
+      <li>Single transition state, no intermediate</li>
     </ul>
   </div>
 
   <div class="card">
-    <h3>Rate Law</h3>
-    <p><code>rate = k [R–X][Nu⁻]</code></p >
+    <h3>Factors Affecting SN2</h3>
+    <ul>
+      <li><strong>Steric Hindrance:</strong> Methyl &gt; Primary &gt; Secondary</li>
+      <li><strong>Nucleophile Strength:</strong> Strong nucleophiles favored</li>
+      <li><strong>Leaving Group:</strong> Better leaving groups increase rate</li>
+      <li><strong>Solvent:</strong> Polar aprotic solvents enhance SN2</li>
+    </ul>
   </div>
 
   <div class="card">
     <h3>Stereochemistry</h3>
     <p>
-      Backside attack leads to <strong>Walden inversion</strong>, resulting in
-      100% inversion of configuration.
-    </p >
+      Backside attack results in <strong>Walden inversion</strong>, giving 100%
+      inversion of configuration.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Common Mistakes & Tips</h3>
+    <ul>
+      <li>Trying SN2 on tertiary substrates</li>
+      <li>Forgetting stereochemical inversion</li>
+      <li>Using polar protic solvents</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Summary Questions</h3>
+    <ul>
+      <li>Why must SN2 occur via backside attack?</li>
+      <li>Why do polar aprotic solvents favor SN2?</li>
+      <li>Why does SN2 not allow rearrangements?</li>
+    </ul>
   </div>
 
   <div class="card">
     <h3>SN2 Video Explanation</h3>
-    <iframe src="https://www.youtube.com/embed/yrvV85H737o"
-            allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/yrvV85H737o" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -280,7 +321,7 @@
       <tr>
         <td>Mechanism</td>
         <td>Multistep</td>
-        <td>One-step (concerted)</td>
+        <td>One-step</td>
       </tr>
       <tr>
         <td>Rate Law</td>
@@ -295,12 +336,12 @@
       <tr>
         <td>Stereochemistry</td>
         <td>Racemization</td>
-        <td>Inversion of configuration</td>
+        <td>Inversion</td>
       </tr>
       <tr>
         <td>Preferred Substrate</td>
         <td>Tertiary</td>
-        <td>Methyl, Primary</td>
+        <td>Methyl / Primary</td>
       </tr>
       <tr>
         <td>Solvent</td>
@@ -317,3 +358,4 @@
 
 </body>
 </html>
+

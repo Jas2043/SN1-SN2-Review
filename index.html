@@ -152,6 +152,30 @@
       border-top: 1px solid var(--border);
     }
 
+    /* 图片样式 */
+    .mechanism-img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+      border: 1px solid var(--border);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 25px 0;
+    }
+    
+    .img-caption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 5px;
+      font-style: italic;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -201,10 +225,16 @@
       <li><strong>Step 3 (If needed):</strong> Deprotonation yields the final product.</li>
     </ul>
     <p>Carbocation rearrangements may occur to form a more stable intermediate.</p>
+    
     <!-- SN1 Mechanism Image -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Z8zeCl0sEKf8Fzko3UxtZAzob9OfO5UiEA&s" 
-         alt="SN1 Reaction Mechanism Diagram" 
-         style="width: 100%; max-width: 600px; height: auto; border-radius: 10px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+    <div class="img-container">
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Z8zeCl0sEKf8Fzko3UxtZAzob9OfO5UiEA&s" 
+        alt="SN1 Reaction Mechanism Diagram" 
+        class="mechanism-img"
+      >
+      <p class="img-caption">SN1 Reaction Mechanism: Stepwise process with carbocation intermediate</p>
+    </div>
   </div>
 
   <div class="card">
@@ -268,10 +298,16 @@
       <li>C–Nu bond forms as C–X bond breaks simultaneously</li>
       <li>Single transition state, no intermediate</li>
     </ul>
+    
     <!-- SN2 Mechanism Image -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7a4tmgTVeOXBmBRSN-4qwWSwysfNqRzJbQ&s" 
-         alt="SN2 Reaction Mechanism Diagram" 
-         style="width: 100%; max-width: 600px; height: auto; border-radius: 10px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+    <div class="img-container">
+      <img 
+        src="https://www.chemistrylearner.com/wp-content/uploads/2020/02/SN2-Reaction-Mechanism.jpg" 
+        alt="SN2 Reaction Mechanism Diagram" 
+        class="mechanism-img"
+      >
+      <p class="img-caption">SN2 Reaction Mechanism: Concerted backside attack with inversion of configuration</p>
+    </div>
   </div>
 
   <div class="card">

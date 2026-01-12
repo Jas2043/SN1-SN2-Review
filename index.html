@@ -1,139 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>SN1 vs SN2 Reaction Review</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>SN1 & SN2 Reaction Review</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     :root {
-      --bg: #f7f9fc;
+      --bg: #f5f9ff;
       --card: #ffffff;
       --accent: #4f9cf9;
       --accent-soft: #dbeafe;
       --text: #1f2937;
       --muted: #6b7280;
+      --border: #e5e7eb;
     }
 
-    html {
+    * {
+      box-sizing: border-box;
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
-      background: var(--bg);
+      font-family: "Inter", Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f6ff, #ffffff);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     header {
-      background: linear-gradient(135deg, var(--accent), #7aa7ff);
-      color: white;
-      padding: 60px 20px;
+      padding: 80px 20px 60px;
       text-align: center;
+      animation: fadeIn 1.2s ease;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      color: #2563eb;
+      margin-bottom: 12px;
     }
 
     header p {
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 20px auto 0;
+      color: var(--muted);
+      max-width: 760px;
+      margin: auto;
+      font-size: 1.05rem;
     }
 
     nav {
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       position: sticky;
       top: 0;
-      z-index: 10;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      list-style: none;
-      margin: 0;
-      padding: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      padding: 12px;
+      text-align: center;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
     }
 
     nav a {
+      color: #2563eb;
+      margin: 0 18px;
       text-decoration: none;
-      color: var(--accent);
       font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px 50px;
+      animation: fadeUp 1s ease;
+    }
+
+    h2 {
+      color: #1d4ed8;
+      margin-bottom: 35px;
+      font-size: 2.4rem;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #1e40af;
+      padding-left: 12px;
+      border-left: 5px solid var(--accent);
     }
 
     .card {
       background: var(--card);
-      padding: 40px;
       border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      margin-bottom: 40px;
-      animation: fadeUp 0.8s ease forwards;
+      padding: 28px 30px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    h2 {
-      margin-top: 0;
-      color: var(--accent);
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
     }
 
-    h3 {
-      margin-top: 30px;
-    }
-
-    ul {
-      padding-left: 20px;
+    code {
+      background: #eff6ff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: #1e40af;
+      font-weight: 600;
     }
 
     iframe {
       width: 100%;
-      height: 400px;
-      border-radius: 12px;
-      margin-top: 20px;
+      height: 380px;
+      border-radius: 14px;
+      margin-top: 18px;
+      border: 1px solid var(--border);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     th, td {
-      padding: 12px;
-      border: 1px solid #e5e7eb;
+      padding: 14px;
+      border: 1px solid var(--border);
       text-align: center;
     }
 
     th {
-      background: var(--accent-soft);
+      background: #eff6ff;
+      color: #1e3a8a;
+      font-weight: 700;
     }
 
     footer {
       text-align: center;
       padding: 40px;
       color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -141,60 +167,159 @@
 <body>
 
 <header>
-  <h1>SN1 vs SN2 Reaction Review</h1>
-  <p>A clear, visual, and conceptual guide to substitution reactions in organic chemistry.</p>
+  <h1>SN1 & SN2 Reaction Review</h1>
+  <p>
+    A complete, visually structured, university-level review of nucleophilic
+    substitution reactions in organic chemistry.
+  </p>
 </header>
 
 <nav>
-  <ul>
-    <li><a href="#sn1">SN1</a></li>
-    <li><a href="#sn2">SN2</a></li>
-    <li><a href="#compare">Comparison</a></li>
-  </ul>
+  <a href="#sn1">SN1</a>
+  <a href="#sn2">SN2</a>
+  <a href="#compare">Comparison</a>
 </nav>
 
+<!-- SN1 -->
 <section id="sn1">
+  <h2>SN1 Reaction</h2>
+
   <div class="card">
-    <h2>SN1 Reaction</h2>
+    <h3>Definition</h3>
+    <p>
+      <strong>SN1</strong> (Substitution Nucleophilic Unimolecular) reactions
+      proceed through a carbocation intermediate. The rate-determining step
+      involves only the substrate.
+    </p>
+  </div>
 
-    <h3>Key Features</h3>
-    <ul>
-      <li>Unimolecular rate-determining step</li>
-      <li>Carbocation intermediate</li>
-      <li>Often leads to racemization</li>
-    </ul>
-
+  <div class="card">
     <h3>Mechanism Steps</h3>
-    <img src="sn1.jpg" alt="SN1 mechanism" style="max-width:100%; margin:20px 0; border-radius:12px;">
+    <ul>
+      <li><strong>Step 1 (Slow, RDS):</strong> Leaving group departs to form a carbocation.</li>
+      <li><strong>Step 2 (Fast):</strong> Nucleophile attacks the planar carbocation.</li>
+      <li><strong>Step 3 (If needed):</strong> Deprotonation yields the final product.</li>
+    </ul>
+    <p>Carbocation rearrangements may occur to form a more stable intermediate.</p>
+    <!-- SN1 Mechanism Image -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Z8zeCl0sEKf8Fzko3UxtZAzob9OfO5UiEA&s" 
+         alt="SN1 Reaction Mechanism Diagram" 
+         style="width: 100%; max-width: 600px; height: auto; border-radius: 10px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+  </div>
 
-    <h3>Video Explanation</h3>
-    <iframe src="https://www.youtube.com/embed/rY7C8jSgUAw" allowfullscreen></iframe>
+  <div class="card">
+    <h3>Factors Affecting SN1</h3>
+    <ul>
+      <li><strong>Substrate:</strong> Tertiary &gt; Secondary &gt; Primary</li>
+      <li><strong>Leaving Group:</strong> Better leaving groups increase rate</li>
+      <li><strong>Solvent:</strong> Polar protic solvents stabilize ions</li>
+      <li><strong>Carbocation Stability:</strong> Allylic and benzylic favored</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Stereochemistry</h3>
+    <p>
+      The planar carbocation allows attack from both sides, producing a
+      <strong>racemic mixture</strong>.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Common Mistakes & Tips</h3>
+    <ul>
+      <li>Assuming strong nucleophiles speed up SN1 (they do not)</li>
+      <li>Forgetting possible carbocation rearrangements</li>
+      <li>Ignoring solvent effects</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Summary Questions</h3>
+    <ul>
+      <li>What is the rate-determining step of SN1?</li>
+      <li>Why are tertiary carbons favored?</li>
+      <li>Why does SN1 lead to racemization?</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>SN1 Video Explanation</h3>
+    <iframe src="https://www.youtube.com/embed/rRAKyR7hX-U" allowfullscreen></iframe>
   </div>
 </section>
 
+<!-- SN2 -->
 <section id="sn2">
+  <h2>SN2 Reaction</h2>
+
   <div class="card">
-    <h2>SN2 Reaction</h2>
+    <h3>Definition</h3>
+    <p>
+      <strong>SN2</strong> (Substitution Nucleophilic Bimolecular) reactions occur
+      in a single, concerted step involving both substrate and nucleophile.
+    </p>
+  </div>
 
-    <h3>Key Features</h3>
-    <ul>
-      <li>Bimolecular single-step reaction</li>
-      <li>Backside attack</li>
-      <li>Inversion of configuration</li>
-    </ul>
-
+  <div class="card">
     <h3>Mechanism Steps</h3>
-    <img src="sn2.jpg" alt="SN2 mechanism" style="max-width:100%; margin:20px 0; border-radius:12px;">
+    <ul>
+      <li>Nucleophile attacks the electrophilic carbon from the backside</li>
+      <li>C–Nu bond forms as C–X bond breaks simultaneously</li>
+      <li>Single transition state, no intermediate</li>
+    </ul>
+    <!-- SN2 Mechanism Image -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7a4tmgTVeOXBmBRSN-4qwWSwysfNqRzJbQ&s" 
+         alt="SN2 Reaction Mechanism Diagram" 
+         style="width: 100%; max-width: 600px; height: auto; border-radius: 10px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+  </div>
 
-    <h3>Video Explanation</h3>
-    <iframe src="https://www.youtube.com/embed/Zk6K7Yz0nFo" allowfullscreen></iframe>
+  <div class="card">
+    <h3>Factors Affecting SN2</h3>
+    <ul>
+      <li><strong>Steric Hindrance:</strong> Methyl &gt; Primary &gt; Secondary</li>
+      <li><strong>Nucleophile Strength:</strong> Strong nucleophiles favored</li>
+      <li><strong>Leaving Group:</strong> Better leaving groups increase rate</li>
+      <li><strong>Solvent:</strong> Polar aprotic solvents enhance SN2</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Stereochemistry</h3>
+    <p>
+      Backside attack results in <strong>Walden inversion</strong>, giving 100%
+      inversion of configuration.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Common Mistakes & Tips</h3>
+    <ul>
+      <li>Trying SN2 on tertiary substrates</li>
+      <li>Forgetting stereochemical inversion</li>
+      <li>Using polar protic solvents</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Summary Questions</h3>
+    <ul>
+      <li>Why must SN2 occur via backside attack?</li>
+      <li>Why do polar aprotic solvents favor SN2?</li>
+      <li>Why does SN2 not allow rearrangements?</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>SN2 Video Explanation</h3>
+    <iframe src="https://www.youtube.com/embed/yrvV85H737o" allowfullscreen></iframe>
   </div>
 </section>
 
 <section id="compare">
-  <div class="card">
-    <h2>SN1 vs SN2 Comparison</h2>
+  <h2>SN1 vs SN2 Comparison</h2>
 
+  <div class="card">
     <table>
       <tr>
         <th>Feature</th>
@@ -202,14 +327,19 @@
         <th>SN2</th>
       </tr>
       <tr>
-        <td>Rate Law</td>
-        <td>k[R–X]</td>
-        <td>k[R–X][Nu]</td>
+        <td>Mechanism</td>
+        <td>Multistep</td>
+        <td>One-step</td>
       </tr>
       <tr>
-        <td>Steps</td>
-        <td>Two-step</td>
-        <td>One-step</td>
+        <td>Rate Law</td>
+        <td>k[R–X]</td>
+        <td>k[R–X][Nu⁻]</td>
+      </tr>
+      <tr>
+        <td>Intermediate</td>
+        <td>Carbocation</td>
+        <td>None</td>
       </tr>
       <tr>
         <td>Stereochemistry</td>
@@ -217,16 +347,21 @@
         <td>Inversion</td>
       </tr>
       <tr>
-        <td>Substrate</td>
-        <td>3° > 2°</td>
-        <td>1° > 2°</td>
+        <td>Preferred Substrate</td>
+        <td>Tertiary</td>
+        <td>Methyl / Primary</td>
+      </tr>
+      <tr>
+        <td>Solvent</td>
+        <td>Polar protic</td>
+        <td>Polar aprotic</td>
       </tr>
     </table>
   </div>
 </section>
 
 <footer>
-  Built for organic chemistry review • SN1 & SN2
+  Built for Organic Chemistry Review • SN1 & SN2 • GitHub Pages Ready
 </footer>
 
 </body>
